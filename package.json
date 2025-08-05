@@ -1,0 +1,41 @@
+{
+  "name": "professor-wilson-portfolio",
+  "version": "1.0.0",
+  "description": "A sophisticated, modernist academic website for a distinguished professor",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:cms\" \"npm run dev:frontend\"",
+    "dev:cms": "cd cms && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:cms && npm run build:frontend",
+    "build:cms": "cd cms && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "npm run install:cms && npm run install:frontend",
+    "install:cms": "cd cms && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "clean": "npm run clean:cms && npm run clean:frontend",
+    "clean:cms": "cd cms && rm -rf node_modules dist .sanity",
+    "clean:frontend": "cd frontend && rm -rf node_modules .nuxt dist",
+    "lint": "npm run lint:cms && npm run lint:frontend",
+    "lint:cms": "cd cms && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "cms",
+    "frontend"
+  ],
+  "keywords": [
+    "academic",
+    "portfolio",
+    "professor",
+    "sanity",
+    "nuxt",
+    "modernist",
+    "bauhaus"
+  ],
+  "author": "Professor Wilson",
+  "license": "MIT"
+} 
