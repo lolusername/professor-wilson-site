@@ -1,0 +1,250 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Modernist Academic Typography */
+@layer base {
+  :root {
+    --font-academic: "Georgia", "Times New Roman", serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+    
+    /* Sophisticated Modernist Color Palette */
+    --color-primary: #0a0a0a;
+    --color-secondary: #2a2a2a;
+    --color-accent: #4a4a4a;
+    --color-background: #ffffff;
+    --color-surface: #f8f8f8;
+    --color-border: #e0e0e0;
+    --color-text: #1a1a1a;
+    --color-text-light: #4a4a4a;
+    --color-text-muted: #6b6b6b;
+    --color-accent-subtle: #f0f0f0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-academic);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+/* Modernist Academic Components */
+@layer components {
+  .font-academic {
+    font-family: var(--font-academic);
+  }
+
+  .academic-prose {
+    @apply prose prose-lg max-w-none;
+    @apply prose-headings:font-academic prose-headings:text-gray-900 prose-headings:font-light;
+    @apply prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-base;
+    @apply prose-a:text-gray-900 prose-a:no-underline hover:prose-a:text-gray-600;
+    @apply prose-strong:text-gray-900 prose-strong:font-medium;
+    @apply prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm;
+    @apply prose-blockquote:border-gray-300 prose-blockquote:bg-gray-50 prose-blockquote:font-normal;
+    @apply prose-li:text-gray-700;
+  }
+
+  .research-card {
+    @apply bg-white rounded-none p-8 border border-gray-200;
+    @apply hover:border-gray-300 hover:bg-gray-50/30 transition-all duration-300;
+    @apply transform hover:-translate-y-1;
+  }
+
+  .publication-item {
+    @apply border-l border-gray-300 pl-8 py-6;
+    @apply hover:border-gray-400 hover:bg-gray-50/20 transition-all duration-300;
+    @apply hover:pl-10;
+  }
+
+  .academic-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-none text-xs font-medium tracking-wide;
+    @apply bg-gray-100 text-gray-700 border border-gray-200;
+    @apply uppercase tracking-wider;
+  }
+
+  .nav-academic {
+    @apply bg-white/98 backdrop-blur-sm border-b border-gray-200;
+    @apply supports-[backdrop-filter]:bg-white/95;
+  }
+
+  .hero-academic {
+    @apply bg-white;
+  }
+
+  .section-spacing {
+    @apply py-20 lg:py-32;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-none;
+    @apply hover:bg-gray-800 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply transition-all duration-300 font-medium text-sm tracking-wide;
+    @apply uppercase tracking-wider;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-none;
+    @apply hover:bg-gray-50 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply transition-all duration-300 font-medium text-sm tracking-wide;
+    @apply uppercase tracking-wider;
+  }
+
+  .card-minimal {
+    @apply bg-white border border-gray-200 rounded-none p-8;
+    @apply hover:border-gray-300 hover:bg-gray-50/30 transition-all duration-300;
+    @apply transform hover:-translate-y-1;
+  }
+
+  .text-academic {
+    @apply text-gray-900;
+  }
+
+  .text-academic-light {
+    @apply text-gray-600;
+  }
+
+  .text-academic-muted {
+    @apply text-gray-500;
+  }
+
+  .modernist-grid {
+    @apply grid gap-12;
+  }
+
+  .elegant-spacing {
+    @apply space-y-12;
+  }
+
+  .sophisticated-border {
+    @apply border border-gray-200;
+  }
+
+  .refined-shadow {
+    @apply shadow-sm;
+  }
+
+  .typography-hierarchy {
+    @apply text-4xl font-light tracking-tight;
+  }
+
+  .typography-subtitle {
+    @apply text-lg font-normal text-gray-600 tracking-wide;
+  }
+
+  .typography-body {
+    @apply text-base leading-relaxed text-gray-700;
+  }
+
+  .typography-caption {
+    @apply text-sm text-gray-500 tracking-wide uppercase;
+  }
+}
+
+/* Modernist Academic Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .transition-academic {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .focus-academic {
+    @apply focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  .tracking-tight {
+    letter-spacing: -0.02em;
+  }
+
+  .tracking-wide {
+    letter-spacing: 0.05em;
+  }
+
+  .tracking-wider {
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .transition-academic,
+  .research-card,
+  .publication-item,
+  .card-minimal {
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .academic-prose {
+    --tw-prose-body: black;
+    --tw-prose-headings: black;
+    --tw-prose-links: #0000ee;
+  }
+} 
